@@ -74,5 +74,9 @@ public class NewBehaviourScript : MonoBehaviour
 ### PIngPong
 ![al5](https://github.com/SOWMIYA2003/ARVR-LAB/assets/93427443/3e734460-6fab-4aa6-846c-8481032965c7)
 ![al6](https://github.com/SOWMIYA2003/ARVR-LAB/assets/93427443/ee6a0e10-d54f-4bbf-8d49-2f54b98e30e4)
+### Animator
+![aq1](https://github.com/SOWMIYA2003/ARVR-LAB/assets/93427443/d2a65889-a998-4a8e-8de0-ab7df1f1d556)
+![aq2](https://github.com/SOWMIYA2003/ARVR-LAB/assets/93427443/a1f449ca-6105-4f89-9c9e-1230cb7cc4fe)
+
 ### RedirectingaScene
 
