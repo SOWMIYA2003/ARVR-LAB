@@ -75,8 +75,78 @@ public class NewBehaviourScript : MonoBehaviour
 ![al5](https://github.com/SOWMIYA2003/ARVR-LAB/assets/93427443/3e734460-6fab-4aa6-846c-8481032965c7)
 ![al6](https://github.com/SOWMIYA2003/ARVR-LAB/assets/93427443/ee6a0e10-d54f-4bbf-8d49-2f54b98e30e4)
 ### Animator
+```
+DEVELOPED BY : SOWMIYA N
+REGISTER NO : 212221230106
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class IdletoCrouch : MonoBehaviour
+{
+    public Animator animator;
+    public float InputX;
+    public float InputY;
+    // Start is called before the first frame update
+    void Start()
+    {
+        animator = this.gameObject.GetComponent<Animator>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        InputX = Input.GetAxis("Vertical");
+        InputY = Input.GetAxis("Horizontal");
+        animator.SetFloat("InputX", InputX);
+        animator.SetFloat("InputY", InputY);
+    }
+}
+```
 ![aq1](https://github.com/SOWMIYA2003/ARVR-LAB/assets/93427443/d2a65889-a998-4a8e-8de0-ab7df1f1d556)
 ![aq2](https://github.com/SOWMIYA2003/ARVR-LAB/assets/93427443/a1f449ca-6105-4f89-9c9e-1230cb7cc4fe)
 
 ### RedirectingaScene
+```
+Developed By : Sowmiya N
+Register No : 212221230106
 
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class Prog : MonoBehaviour
+{
+    Rigidbody rb;
+    public GameObject WinText;
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("Level2");
+        }
+    }
+    public void OnMouseDown()
+    {
+        Destroy(gameObject);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "cube")
+        {
+            Destroy(collision.gameObject);
+            WinText.SetActive(true);
+        }
+    }
+}
+
+```
